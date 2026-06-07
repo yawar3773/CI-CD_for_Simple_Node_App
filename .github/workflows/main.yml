@@ -18,7 +18,7 @@ jobs:
         node-version: '25'
 
     - name: Install dependencies
-      working-directory: ./hello-node
+      #working-directory: ./hello-node
       run: npm ci
 
     - name: Run Tests (If any)
