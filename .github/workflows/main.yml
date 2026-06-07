@@ -22,7 +22,7 @@ jobs:
       run: npm ci
 
     - name: Run Tests (If any)
-      working-directory: ./hello-node
+      #working-directory: ./hello-node
       run: npm test --if-present
 
   docker-build-test:
@@ -42,7 +42,7 @@ jobs:
     - name: Build and Push Docker Image
       uses: docker/build-push-action@v6
       with:
-        context: ./hello-node
+        #context: ./hello-node
         push: true
         tags: |
               ${{ secrets.DOCKER_USERNAME }}/hello-node:latest
